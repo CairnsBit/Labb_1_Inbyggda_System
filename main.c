@@ -9,7 +9,7 @@ void main (void) {
 
 	char single = 'b';
 
-	char name[10] = "maciej";
+	char name[10] = "maciej\r";
 
 	//blink_led();
 
@@ -18,4 +18,8 @@ void main (void) {
 	//uart_putchar(single);
 
 	uart_putstr(name);
+
+	while (1) {
+		uart_echo();
+	}
 }
