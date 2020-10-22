@@ -23,6 +23,5 @@ void blink_led() {
 		_delay_ms(500);
 		PORTB &= ~ 0B000010;
 		_delay_ms(500);
-
 	}
 }
