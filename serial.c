@@ -24,7 +24,7 @@ void uart_putchar(char chr) {
 void uart_putstr(const char* str) {
 	for (int i = 0; str[i] != '\0'; i++) {
 		uart_putchar(str[i]);
-		_delay_ms(100);
+		_delay_ms(200);
 	}
 }
 

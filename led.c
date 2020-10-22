@@ -5,23 +5,23 @@
 
 void blink_led() {
 
-	DDRB |= 0B001000;	//RED
-	DDRB |= 0B000100;	//BLUE
-	DDRB |= 0B000010;	//GREEN
+	DDRB |= (1 << PB3);	//RED
+	DDRB |= (1 << PB2);	//BLUE
+	DDRB |= (1 << PB1);	//GREEN
 
 
 	while (1) {
-		PORTB |= 0B001000;
+		PORTB |= (1 << PB3);
 		_delay_ms(500);
-		PORTB &= ~ 0B001000;
+		PORTB &= ~(1 << PB3);
 		_delay_ms(500);
-		PORTB |= 0B000100;
+		PORTB |= (1 << PB1);
 		_delay_ms(500);
-		PORTB &= ~ 0B000100;
+		PORTB &= ~(1 << PB1);
 		_delay_ms(500);
-		PORTB |= 0B000010;
+		PORTB |= (1 << PB2);
 		_delay_ms(500);
-		PORTB &= ~ 0B000010;
+		PORTB &= ~(1 << PB2);
 		_delay_ms(500);
 	}
 }

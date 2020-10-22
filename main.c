@@ -11,15 +11,15 @@ void main (void) {
 
 	char name[10] = "maciej\r";
 
-	//blink_led();
-
 	uart_init();
+
+	blink_led();
 
 	//uart_putchar(single);
 
-	uart_putstr(name);
+	//uart_putstr(name);
 
 	while (1) {
-		uart_echo();
+		uart_echo();			// echo lyssnar för input 24/7
 	}
 }
